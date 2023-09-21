@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material'
 
 import Icon from '../assets/icons/gym.png'
 
-const BodyPart = ({ item, setBodyPart, bodyPart}) => {
+const BodyPart = ({ item, bodyPart, setBodyPart }) => {
   return (
     <Stack
         type="button"
@@ -25,15 +25,8 @@ const BodyPart = ({ item, setBodyPart, bodyPart}) => {
         }}
     >
         <img src={Icon} alt="dumbbell" style={{ width:'40px', height:'40px'}}/>
-        <Typography 
-            fontSize='20px'
-            fontWeight='bold'
-            color='#3A1212'
-            textTransform="capitalize"
-            onClick={() => setBodyPart(item)}
-        >
-            {item}
-        </Typography>
+        <Typography fontSize='20px' fontWeight='bold' color='#3A1212' textTransform="capitalize">{item}</Typography>
+
     </Stack>
   )
 }
