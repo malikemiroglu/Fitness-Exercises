@@ -27,11 +27,16 @@ body {
     border-radius: 4px;
     position: absolute;
     z-index: 999;
+    bottom: -7px;
 }
 
 .right-arrow {
-    /* right: 140px; */
-    right: 27px;
+    right: 140px;
+    /* right: 27px; */
+}
+
+.left-arrow {
+    right: 190px;
 }
 
 .right-arrow:hover,
@@ -79,13 +84,13 @@ body {
 }
 
 .bodyPart-card {
-    transform: scale(1.1);
+    transform: scale(0.9);
     transition: all 0.3s ease-in-out;
 }
 
 .exercise-card:hover,
 .bodyPart-card:hover {
-    transform: scale(1.2, 1.2);
+    transform: scale(1, 1);
 }
 
 .search-btn:hover {
@@ -100,6 +105,10 @@ body {
     width: 387px;
     height: 381px;
     text-decoration: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+    overflow: hidden;
 }
 
 @media screen and (max-width:1200px){
