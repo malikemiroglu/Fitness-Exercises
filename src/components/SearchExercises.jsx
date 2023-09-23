@@ -11,12 +11,15 @@ function SearchExercises({ setExercises, bodyPart, setBodyPart}) {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
- 
-      setBodyParts(['all', ...bodyPartsData]);
+      try {
+        const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+        setBodyParts(['all', ...bodyPartsData]);
+      } catch (error) {
+        console.error('Fetch işlemi sirasinda bir hata olustu:', error);
+      }
     }
 
-    fetchExercisesData();
+    fetchExercisesData()
   }, [])
 
 
@@ -87,6 +90,7 @@ function SearchExercises({ setExercises, bodyPart, setBodyPart}) {
           data={bodyParts} 
           bodyPart={bodyPart} 
           setBodyPart={setBodyPart}
+          isBodyParts
         />
       </Box>
     </Stack>
