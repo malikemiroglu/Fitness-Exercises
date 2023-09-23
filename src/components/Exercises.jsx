@@ -58,7 +58,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
               defaultPage={1}
               count={Math.ceil(exercises.length / exercisesPerPage)}
               page={currentPage}
-              onChane={paginate}
+              onChange={paginate}
               size="large"
             />
           )}

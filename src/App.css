@@ -75,7 +75,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 10px;
-    transform: scale(1, 1);
+    transform: scale(0.9);
     transition: all 0.3s ease-in-out;
 }
 
