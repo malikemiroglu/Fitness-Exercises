@@ -108,6 +108,7 @@ body {
 }
 
 .react-horizontal-scrolling-menu--scroll-container {
+    margin-bottom: 30px;
     overflow: hidden;
 }
 
@@ -116,9 +117,9 @@ body {
         width: 500px;
     }
     
-    .let-arrow,
+    .left-arrow,
     .right-arrow {
-        position: static !important;
+        /* position: static !important; */
     }
     
     .hero-banner-img {
