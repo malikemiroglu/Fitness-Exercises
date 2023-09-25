@@ -4,7 +4,7 @@ import VideoModal from './VideoModal';
 
 const VideoItem = ({video}) => {
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-    console.log({video})
+
   return (
     <>
     {isVideoModalOpen && <VideoModal title={video.title} videoId={video.videoId}  onClose={() => setIsVideoModalOpen(false)} />}
