@@ -7,11 +7,12 @@ import Loader from './Loader'
 
 const SimilarExercises = ({ targetMuscleExercises, eqipmentExercises }) => {
 
-    const scrollToTop = () => {
+    const scrollToTop = (e) => {
+        if(e.target.parentNode.classList.contains('left-arrow') || e.target.parentNode.classList.contains('right-arrow')) return;
         window.scrollTo({
-            top: 0, // Sayfanın en üstüne gitmek için 0 değerini kullanıyoruz.
-            behavior: 'smooth', // Bu, yavaşça kaydırma efekti ekler.
-        })
+            top: 0,
+            behavior: 'smooth',
+        });
     };
 
   return (
@@ -21,7 +22,7 @@ const SimilarExercises = ({ targetMuscleExercises, eqipmentExercises }) => {
         </Typography>
         <Stack
             sx={{p:'2', position:'relative'}}
-            onClick={() => scrollToTop()}
+            onClick={(e) => scrollToTop(e)}
         >
             {targetMuscleExercises.length !== 0 ?
             <HorizontalScrollbar data={targetMuscleExercises} />
@@ -33,7 +34,7 @@ const SimilarExercises = ({ targetMuscleExercises, eqipmentExercises }) => {
         </Typography>
         <Stack
             sx={{p:'2', position:'relative'}}
-            onClick={() => scrollToTop()}
+            onClick={(e) => scrollToTop(e)}
         >
             {eqipmentExercises.length !== 0 ?
             <HorizontalScrollbar data={eqipmentExercises} />
