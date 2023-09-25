@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Typography, Stack, Button } from '@mui/material'
 
 import BodyPartImage from '../assets/icons/body-part.png'
@@ -7,6 +7,11 @@ import EquipmentImage from '../assets/icons/equipment.png'
 
 const Detail = ({ exerciseDetail }) => {
     const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }
+    , [])
 
     const extraDetail = [
         {
