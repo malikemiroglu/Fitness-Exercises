@@ -34,8 +34,14 @@ function SearchExercises({ setExercises, bodyPart, setBodyPart}) {
         || exercise.bodyPart.toLowerCase().includes(search)
       );
 
-      setSearch('');
+      const exercise = document.querySelector('#exercises');
+      
       setExercises(filteredExercises);
+      
+      window.scrollTo({
+        top: exercise.offsetTop,
+        behavior: 'smooth',
+      });
     }
   } 
 
