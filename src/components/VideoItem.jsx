@@ -8,7 +8,7 @@ const VideoItem = ({video}) => {
   return (
     <>
     {isVideoModalOpen && <VideoModal title={video.title} videoId={video.videoId}  onClose={() => setIsVideoModalOpen(false)} />}
-    <Box onClick={() => setIsVideoModalOpen(true)}>
+    <Box onClick={() => setIsVideoModalOpen(true)} style={{cursor:"pointer", width:"360px"}}>
         <img style={{ borderTopLeftRadius: '20px' }} src={video.thumbnails.length ? video.thumbnails[0].url : ""} alt={video.title} />
         <Box>
             <Typography sx={{ fontSize: { lg: '28px', xs: '18px' } }} fontWeight={600} color="#000">
